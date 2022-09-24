@@ -18,10 +18,12 @@ if(textHour<currentHour) {
 
 } )
 
-$.parseJSON$(`text-${buttonId}`).text
+var buttonId = $(".saveBtn");
+
+buttonId.on('click', function () {
+   console.log("Save");
+   localStorage.setItem(`text-${buttonId}`).text
+});
 
 
-//add event listeners to buttons on click
-//when click use (this) to extract id
-//$(`text-${buttonId}`).text
-//save text to local storage
+
